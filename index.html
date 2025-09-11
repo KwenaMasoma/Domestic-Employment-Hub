@@ -186,4 +186,19 @@
     <p>&copy; 2025 Domestic Employment Hub. All rights reserved.</p>
   </footer>
 </body>
+   <script>
+    function sendToWhatsApp(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      const whatsappNumber = '27732067477';
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${subject}\nMessage: ${message}`
+      )}`;
+      window.open(url, '_blank');
+    }
+  </script>
 </html>
