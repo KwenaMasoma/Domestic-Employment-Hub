@@ -98,6 +98,9 @@
       font-size: 1.8rem;
       margin-bottom: 0.5rem;
     }
+    #contact{
+      background: var(--secondary);
+    }
 
     .findJob p {
       margin-bottom: 1.5rem;
@@ -115,6 +118,17 @@
     }
 
     .btn:hover {
+      background: #038c59;
+    }
+    #btn2 {
+      background: var(--primary);
+      border: none;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #btn2:hover {
       background: #038c59;
     }
 
@@ -212,7 +226,7 @@
         <label class="block mb-2 font-semibold">Message</label>
         <textarea id="message" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C1272D]" rows="5" placeholder="Your Message" required></textarea>
       </div>
-      <button type="submit" class="btn-primary w-full font-semibold px-6 py-3 rounded-lg shadow">Send Query</button>
+      <button id="btn2" type="submit" class="btn-primary w-full font-semibold px-6 py-3 rounded-lg shadow">Send Query</button>
     </form>
     </section>
   </main>
