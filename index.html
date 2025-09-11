@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Domestic Employment Hub</title>
+  
+  <style>
+    :root {
+      --primary: #04AA6D;
+      --secondary: #D3D3D3;
+      --text: #1f2937;
+      --bg: #ffffff;
+      --muted: #6b7280;
+      font-size: 16px;
+      font-family: system-ui, Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.125rem;
+      margin: 0.5rem 0 2rem;
+    }
+
+    .topnav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: opacity 0.3s ease;
+    }
+
+    .topnav a:hover {
+      opacity: 0.8;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+
+    .findJob {
+      background: var(--secondary);
+      padding: 2rem;
+      border-radius: 1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .findJob img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .findJob h1 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .findJob p {
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      background: var(--primary);
+      border: none;
+      color: white;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #038c59;
+    }
+
+    .about {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: var(--secondary);
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .topnav {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Domestic Employment Hub</h1>
+    <p>Your trusted space for job opportunities</p>
+    <nav class="topnav">
+      <a href="#home">Home</a>
+      <a href="#apply">Apply</a>
+      <a href="#updates">Updates</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="apply">
+      <div class="findJob">
+        <img src="img_girl.jpg" alt="job market">
+        <h1 id="home">Looking For A Job?</h1>
+        <p>Apply using our portal today and start your journey!</p>
+        <button class="btn">Apply</button>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About Us</h2>
+      <p>
+        We connect domestic workers and employers through a secure and reliable platform. 
+        Our mission is to empower individuals by creating job opportunities and simplifying the hiring process.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <!-- Add your form inputs here -->
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Domestic Employment Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>
