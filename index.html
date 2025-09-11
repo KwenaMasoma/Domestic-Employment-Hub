@@ -176,9 +176,39 @@
 
     <section id="contact">
       <h2>Contact Us</h2>
-      <form>
-        <!-- Add your form inputs here -->
-      </form>
+      <form onsubmit="sendToWhatsApp(event)" class="bg-white shadow-lg rounded-xl p-8 space-y-6 border border-gray-200">
+      <div>
+        <label class="block mb-2 font-semibold">Name</label>
+        <input type="text" id="name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C1272D]" placeholder="Your Name" required/>
+      </div>
+      <div>
+        <label class="block mb-2 font-semibold">Email</label>
+        <input type="email" id="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C1272D]" placeholder="Your Email" required/>
+      </div>
+      <div>
+        <label class="block mb-2 font-semibold">Phone Number</label>
+        <input type="tel" id="phone" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C1272D]" placeholder="Your Phone Number" required/>
+      </div>
+      <div>
+        <label class="block mb-2 font-semibold">Service</label>
+        <select id="subject" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C1272D]" required>
+          <option value="">Select a service</option>
+          <option value="Cleaning">Cleaning Jobs</option>
+          <option value="Brick Layer">Brick Layer Jobs</option>
+          <option value="Gardening">Gardening Jobs</option>
+          <option value="Nanny">Nanny Jobs</option>
+          <option value="Aftercare">Aftercare Jobs</option>
+          <option value="Painter">Painter Jobs</option>
+          <option value="Welding">Welding Jobs</option>
+          <option value="Plumbing">Plumbing Jobs</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mb-2 font-semibold">Message</label>
+        <textarea id="message" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C1272D]" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary w-full font-semibold px-6 py-3 rounded-lg shadow">Send Query</button>
+    </form>
     </section>
   </main>
 
@@ -194,7 +224,7 @@
       const phone = document.getElementById('phone').value;
       const subject = document.getElementById('subject').value;
       const message = document.getElementById('message').value;
-      const whatsappNumber = '27732067477';
+      const whatsappNumber = '27826177073';
       const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${subject}\nMessage: ${message}`
       )}`;
