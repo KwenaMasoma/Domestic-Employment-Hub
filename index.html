@@ -19,7 +19,6 @@
       font-size: 16px;
       font-family: system-ui, Arial, sans-serif;
     }
-
     body {
       margin: 0;
       padding: 0;
@@ -30,31 +29,20 @@
       flex-direction: column;
       min-height: 100vh;
     }
-
     header {
       background: var(--primary);
       color: white;
       padding: 4rem 2rem;
       text-align: center;
     }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.125rem;
-      margin: 0.5rem 0 2rem;
-    }
-
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.125rem; margin: 0.5rem 0 2rem; }
     .topnav {
       display: flex;
       justify-content: center;
       gap: 2rem;
       flex-wrap: wrap;
     }
-
     .topnav a {
       color: white;
       text-decoration: none;
@@ -62,21 +50,9 @@
       font-size: 1rem;
       transition: opacity 0.3s ease;
     }
-
-    .topnav a:hover {
-      opacity: 0.8;
-    }
-
-    main {
-      flex: 1;
-      padding: 2rem;
-    }
-
-    section {
-      margin-bottom: 4rem;
-      text-align: center;
-    }
-
+    .topnav a:hover { opacity: 0.8; }
+    main { flex: 1; padding: 2rem; }
+    section { margin-bottom: 4rem; text-align: center; }
     .findJob {
       background: var(--secondary);
       padding: 2rem;
@@ -85,69 +61,23 @@
       margin: 0 auto;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-
     .findJob img {
-      width: 100%;
-      height: auto;
-      border-radius: 0.5rem;
-      margin-bottom: 1rem;
+      width: 100%; border-radius: 0.5rem; margin-bottom: 1rem;
     }
-
-    .findJob h1 {
-      color: var(--primary);
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-    #contact{
-      background: var(--secondary);
-      padding: 2rem;
-      border-radius: 1rem;
-      max-width: 700px;
-      margin: 0 auto;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      
-    }
-
-    .findJob p {
-      margin-bottom: 1.5rem;
-    }
-
+    .findJob h1 { color: var(--primary); font-size: 1.8rem; margin-bottom: 0.5rem; }
     .btn {
-      background: var(--primary);
-      border: none;
-      color: white;
-      padding: 0.75rem 2rem;
-      font-size: 1rem;
-      border-radius: 0.5rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
+      background: var(--primary); border: none; color: white;
+      padding: 0.75rem 2rem; font-size: 1rem; border-radius: 0.5rem;
+      cursor: pointer; transition: background 0.3s ease;
     }
-
-    .btn:hover {
-      background: #038c59;
-    }
-    #btn2 {
-      background: var(--primary);
-      border: none;
-      color: white;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    #btn2:hover {
-      background: #038c59;
-    }
-
+    .btn:hover { background: #038c59; }
     .about {
-      max-width: 700px;
+      max-width: 900px;
       margin: 0 auto;
+      text-align: left;
     }
-
-    .about h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
+    .about h2 { font-size: 2.5rem; margin-bottom: 1rem; text-align: center; }
+    .about h3 { font-size: 1.5rem; margin-top: 2rem; color: var(--primary); }
     footer {
       background: var(--secondary);
       padding: 1rem;
@@ -155,18 +85,10 @@
       font-size: 0.9rem;
       color: var(--muted);
     }
-
-    /* Responsive tweaks */
+    /* Responsive */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      #contact{
-      font-size: 2rem;
-    }
-      .topnav {
-        gap: 1rem;
-      }
+      header h1 { font-size: 2rem; }
+      .topnav { gap: 1rem; }
     }
   </style>
 </head>
@@ -178,12 +100,13 @@
       <a href="#apply">Home</a>
       <a href="#apply">Apply</a>
       <a href="#updates">Updates</a>
-      <a href="#contact">Contact</a>
       <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
+    <!-- Home -->
     <section id="apply">
       <div class="findJob">
         <img src="assets/images/homepage-cover.png" alt="job market">
@@ -193,50 +116,77 @@
       </div>
     </section>
 
+    <!-- About -->
     <section class="about" id="about">
       <h2>About Us</h2>
       <p>
-        We connect domestic workers and employers through a secure and reliable platform. 
-        Our mission is to empower individuals by creating job opportunities and simplifying the hiring process.
+        Domestic Employment Hub was built on one simple belief: <strong>everyone deserves a fair chance to find meaningful work</strong>. 
+        We are more than just a platform — we are a bridge connecting hardworking domestic workers with households, families, and businesses in need of reliable services.
+      </p>
+
+      <h3>Our Mission</h3>
+      <p>
+        Our mission is to empower individuals by providing a safe, transparent, and efficient space for job seekers and employers to connect. 
+        Whether you are looking for a nanny, a gardener, a cleaner, or skilled trade services, we make hiring simple and trustworthy.
+      </p>
+
+      <h3>Our Vision</h3>
+      <p>
+        We envision a world where domestic work is recognized, valued, and dignified. 
+        By creating equal opportunities, we aim to reduce unemployment, support families, and uplift communities across South Africa and beyond.
+      </p>
+
+      <h3>What We Offer</h3>
+      <ul style="list-style:disc; padding-left:1.5rem;">
+        <li>Easy job applications for domestic workers.</li>
+        <li>A reliable platform for employers to post opportunities.</li>
+        <li>Verified connections that prioritize trust and safety.</li>
+        <li>Support and resources for both workers and employers.</li>
+      </ul>
+
+      <h3>Our Values</h3>
+      <p>
+        We are driven by <strong>integrity, inclusivity, and impact</strong>. 
+        Every service we provide is guided by the commitment to fairness, respect, and growth for both job seekers and employers.
       </p>
     </section>
 
-    <section id="contact"  class="py-20 px-6 max-w-3xl mx-auto">
-       <h2 class="text-3xl font-extrabold text-center mb-12 text-[#0D1B2A]">Get In Touch</h2>
-
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-6 max-w-3xl mx-auto">
+      <h2 class="text-3xl font-extrabold text-center mb-12 text-[#0D1B2A]">Get In Touch</h2>
       <form onsubmit="sendToWhatsApp(event)" class="bg-white shadow-lg rounded-xl p-8 space-y-6 border border-gray-200">
-      <div>
-        <label class="block mb-2 font-semibold">Name</label>
-        <input type="text" id="name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C1272D]" placeholder="Your Name" required/>
-      </div>
-      <div>
-        <label class="block mb-2 font-semibold">Email</label>
-        <input type="email" id="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C1272D]" placeholder="Your Email" required/>
-      </div>
-      <div>
-        <label class="block mb-2 font-semibold">Phone Number</label>
-        <input type="tel" id="phone" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C1272D]" placeholder="Your Phone Number" required/>
-      </div>
-      <div>
-        <label class="block mb-2 font-semibold">Service</label>
-        <select id="subject" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C1272D]" required>
-          <option value="">Select a service</option>
-          <option value="Cleaning">Cleaning Jobs</option>
-          <option value="Brick Layer">Brick Layer Jobs</option>
-          <option value="Gardening">Gardening Jobs</option>
-          <option value="Nanny">Nanny Jobs</option>
-          <option value="Aftercare">Aftercare Jobs</option>
-          <option value="Painter">Painter Jobs</option>
-          <option value="Welding">Welding Jobs</option>
-          <option value="Plumbing">Plumbing Jobs</option>
-        </select>
-      </div>
-      <div>
-        <label class="block mb-2 font-semibold">Message</label>
-        <textarea id="message" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#C1272D]" rows="5" placeholder="Your Message" required></textarea>
-      </div>
-      <button id="btn2" type="submit" class="btn-primary w-full font-semibold px-6 py-3 rounded-lg shadow">Send Query</button>
-    </form>
+        <div>
+          <label class="block mb-2 font-semibold">Name</label>
+          <input type="text" id="name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]" placeholder="Your Name" required/>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Email</label>
+          <input type="email" id="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]" placeholder="Your Email" required/>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Phone Number</label>
+          <input type="tel" id="phone" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]" placeholder="Your Phone Number" required/>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Service</label>
+          <select id="subject" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]" required>
+            <option value="">Select a service</option>
+            <option value="Cleaning">Cleaning Jobs</option>
+            <option value="Brick Layer">Brick Layer Jobs</option>
+            <option value="Gardening">Gardening Jobs</option>
+            <option value="Nanny">Nanny Jobs</option>
+            <option value="Aftercare">Aftercare Jobs</option>
+            <option value="Painter">Painter Jobs</option>
+            <option value="Welding">Welding Jobs</option>
+            <option value="Plumbing">Plumbing Jobs</option>
+          </select>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Message</label>
+          <textarea id="message" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button id="btn2" type="submit" class="btn-primary w-full font-semibold px-6 py-3 rounded-lg shadow bg-[#04AA6D] text-white hover:bg-[#038c59]">Send Query</button>
+      </form>
     </section>
   </main>
 
@@ -244,19 +194,20 @@
     <p>&copy; 2025 Domestic Employment Hub. All rights reserved.</p>
   </footer>
 </body>
-   <script>
-    function sendToWhatsApp(event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value;
-      const whatsappNumber = '27826177073';
-      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${subject}\nMessage: ${message}`
-      )}`;
-      window.open(url, '_blank');
-    }
-  </script>
+
+<script>
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    const whatsappNumber = '27826177073';
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${subject}\nMessage: ${message}`
+    )}`;
+    window.open(url, '_blank');
+  }
+</script>
 </html>
