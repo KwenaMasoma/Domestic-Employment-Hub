@@ -112,7 +112,8 @@
         <img src="assets/images/homepage-cover.png" alt="job market">
         <h1 id="home">Looking For A Job?</h1>
         <p>Apply using our portal today and start your journey!</p>
-        <button onsubmit="apply(event)" class="btn">Apply</button>
+        <button class="btn" onclick="window.location.href='apply.html'">Apply</button>
+
       </div>
     </section>
 
@@ -209,11 +210,6 @@
     )}`;
     window.open(url, '_blank');
   }
-  function apply(event){
-
-    window.location.href = "apply.html";
-
-    
-  }
+  
 </script>
 </html>
