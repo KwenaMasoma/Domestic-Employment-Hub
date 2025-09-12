@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Domestic Employment Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    
+  </style>
+
+</head>
+  <body>
+
+     <section id="applyform" class="py-20 px-6 max-w-3xl mx-auto">
+      <h2 class="text-3xl font-extrabold text-center mb-12 text-[#0D1B2A]">Get In Touch</h2>
+      <form onsubmit="sendToWhatsApp(event)" class="bg-white shadow-lg rounded-xl p-8 space-y-6 border border-gray-200">
+        <div>
+          <label class="block mb-2 font-semibold">Name</label>
+          <input type="text" id="name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]" placeholder="Your Name" required/>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Email</label>
+          <input type="email" id="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]" placeholder="Your Email" required/>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Phone Number</label>
+          <input type="tel" id="phone" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]" placeholder="Your Phone Number" required/>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Service</label>
+          <select id="subject" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]" required>
+            <option value="">Select a service</option>
+            <option value="Cleaning">Cleaning Jobs</option>
+            <option value="Brick Layer">Brick Layer Jobs</option>
+            <option value="Gardening">Gardening Jobs</option>
+            <option value="Nanny">Nanny Jobs</option>
+            <option value="Aftercare">Aftercare Jobs</option>
+            <option value="Painter">Painter Jobs</option>
+            <option value="Welding">Welding Jobs</option>
+            <option value="Plumbing">Plumbing Jobs</option>
+          </select>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold">Message</label>
+          <textarea id="message" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <div>
+        <label for="cv">Choose a cv file:</label>
+  <input type="file" id="cv" name="uploadedFile">
+          </div>
+        <button id="btn2" type="submit" class="btn-primary w-full font-semibold px-6 py-3 rounded-lg shadow bg-[#04AA6D] text-white hover:bg-[#038c59]">Send Query</button>
+      </form>
+    </section>
+  </body>
+  <script>
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    const whatsappNumber = '27826177073';
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${subject}\nMessage: ${message}`
+    )}`;
+    window.open(url, '_blank');
+  }
+</script>
+</html>
+  
