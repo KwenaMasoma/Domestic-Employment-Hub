@@ -33,7 +33,7 @@
         <div>
           <label class="block mb-2 font-semibold">Service</label>
           <select id="subject" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]" required>
-            <option value="">Select a service</option>
+            <option value="">Job Applying For</option>
             <option value="Cleaning">Cleaning Jobs</option>
             <option value="Brick Layer">Brick Layer Jobs</option>
             <option value="Gardening">Gardening Jobs</option>
@@ -45,13 +45,19 @@
           </select>
         </div>
         <div>
-          <label class="block mb-2 font-semibold">Message</label>
+          <label class="block mb-2 font-semibold">Tell Us About Yourself</label>
           <textarea id="message" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]" rows="5" placeholder="Your Message" required></textarea>
         </div>
-        <div>
-        <label for="cv">Choose a cv file:</label>
-  <input type="file" id="cv" name="uploadedFile">
-          </div>
+        <div class="file-upload">
+  <label class="block mb-2 font-semibold">Upload CV</label>
+  <input type="file" id="cvFile" class="w-full border border-gray-300 rounded-lg px-4 py-2 mb-2 focus:outline-none focus:ring-2 focus:ring-[#04AA6D]">
+  
+  <!-- Remove button (hidden until a file is selected) -->
+  <button type="button" id="removeFileBtn" class="btn bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg hidden">
+    Remove File
+  </button>
+</div>
+
         <button id="btn2" type="submit" class="btn-primary w-full font-semibold px-6 py-3 rounded-lg shadow bg-[#04AA6D] text-white hover:bg-[#038c59]">Send Query</button>
       </form>
     </section>
@@ -65,11 +71,32 @@
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
     const whatsappNumber = '27826177073';
+    const cv = document.getElementById('cvFile').value
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${subject}\nMessage: ${message}`
     )}`;
     window.open(url, '_blank');
   }
+
+    <!--Cv Handling-->
+
+    const fileInput = document.getElementById('cvFile');
+  const removeBtn = document.getElementById('removeFileBtn');
+
+  // Show button when a file is selected
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files.length > 0) {
+      removeBtn.classList.remove('hidden');
+    } else {
+      removeBtn.classList.add('hidden');
+    }
+  });
+
+  // Clear file input when clicking remove
+  removeBtn.addEventListener('click', () => {
+    fileInput.value = ""; // clears the file
+    removeBtn.classList.add('hidden');
+  });
 </script>
 </html>
   
